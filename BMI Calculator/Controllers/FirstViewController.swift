@@ -46,6 +46,8 @@ class FirstViewController: UIViewController {
         if segue.identifier == "goToSecondVC" {
             let destinationVC = segue.destination as! SecondViewController
             destinationVC.bmiValue = calculator.getBMIValue()
+            destinationVC.advice = calculator.getAdvice()
+            destinationVC.color = calculator.getColor()
         }
     }
 }
