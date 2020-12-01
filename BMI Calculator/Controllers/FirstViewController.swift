@@ -8,7 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class FirstViewController: UIViewController {
+    
+    var calculator = Calculator()
 
     @IBOutlet weak var heightLabel: UILabel!
     
@@ -34,12 +36,17 @@ class ViewController: UIViewController {
     @IBAction func calculatePressed(_ sender: UIButton) {
         let height = heightSlider.value
         let weight = weightSlider.value
-        let bmiResult = weight / pow(height, 2) //the same as (height*height)
-        print(bmiResult)
         
-        let secondVC = SecondViewController()
-        secondVC.bmiValue = String(format: "%.1f", bmiResult)
-        self.present(secondVC, animated: true, completion: nil)
+        calculator.calculateBMI(height: height, weight: weight)
+       
+        performSegue(withIdentifier: "goToSecondVC", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToSecondVC" {
+            let destinationVC = segue.destination as! SecondViewController
+            destinationVC.bmiValue = calculator.getBMIValue()
+        }
     }
 }
 

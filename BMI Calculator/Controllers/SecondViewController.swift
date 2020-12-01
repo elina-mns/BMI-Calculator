@@ -10,18 +10,17 @@ import UIKit
 
 class SecondViewController: UIViewController {
     
-    var bmiValue = "0.0"
-
+    var bmiValue: String?
+    
+    @IBOutlet weak var bmiLabel: UILabel!
+    @IBOutlet weak var adviceLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
-        let label = UILabel()
-        label.text = bmiValue
-        label.frame = CGRect(x: 0, y: 0, width: 100, height: 50)
-        view.addSubview(label)
+        bmiLabel.text = bmiValue
     }
     
     @IBAction func recalculatePressed(_ sender: Any) {
-        
+        self.dismiss(animated: true, completion: nil)
     }
 }
