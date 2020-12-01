@@ -14,4 +14,9 @@ Based on the user’s weight and height it will calculate their body mass and gi
 * Color literals
 
 
+<img src="https://github.com/elina-mns/BMI-Calculator/blob/main/BMI%20Calculator/Assets.xcassets/1.png" width=300, height=600, align="left"/>
+<img src="https://github.com/elina-mns/BMI-Calculator/blob/main/BMI%20Calculator/Assets.xcassets/2.png" width=300, height=600, align="left"/>
+<img src="https://github.com/elina-mns/BMI-Calculator/blob/main/BMI%20Calculator/Assets.xcassets/3.png" width=300, height=600, align="center"/>
+
+
 >This is a companion project to The App Brewery's Complete App Development Bootcamp, check out the full course at [www.appbrewery.co](https://www.appbrewery.co/)
